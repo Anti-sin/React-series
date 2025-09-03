@@ -14,21 +14,25 @@ function Login() {
         setUser({username, password})
     }
   return (
-    <div>
+    <div className="flex flex-col gap-5 text-3xl">
       <h2>Login</h2>
       <input
+        className="p-2 outline-none rounded-md"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         type="text"
         placeholder="username"
       />
       <input
+        className="p-2 outline-none rounded-md"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         type="text"
         placeholder="password"
       />
-      <button onClick={handleSubmit}>Submit</button>
+      <button className="p-2 outline-none rounded-md text-white bg-zinc-800 hover:bg-black " onClick={handleSubmit}>
+        Submit
+      </button>
     </div>
   );
 }
